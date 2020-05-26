@@ -16,6 +16,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compileOnly 'org.projectlombok:lombok'
+	compile 'org.aspectj:aspectjweaver:1.8.8'
+	annotationProcessor 'org.projectlombok:lombok'
+	dependencies {
+		compile group: 'org.apache.lucene', name: 'lucene-core', version: '7.1.0'
+		compile group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '7.1.0'
+		compile group: 'org.apache.lucene', name: 'lucene-codecs', version: '7.1.0'
+		compile group: 'org.apache.lucene', name: 'lucene-queryparser', version: '7.1.0'
+		compile group: 'org.apache.lucene', name: 'lucene-queries', version: '7.1.0'
+		compile group: 'org.apache.lucene', name: 'lucene-test-framework', version: '7.1.0'
+	}
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
